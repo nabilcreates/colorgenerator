@@ -36,10 +36,7 @@ let app = new Vue({
         pushToHistory(h) {
 
             // push an object containing the color and date
-            this.history.push({
-                color: h,
-                date: new Date(),
-            })
+            this.history.push(h)
         },
 
         discoMode(int) {

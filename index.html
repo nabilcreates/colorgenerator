@@ -27,17 +27,14 @@
             <!-- button to generate a random color -->
             <a @click='setColor(getRandomColor())' href="#" class="btn btn-primary mainbutton">MANUAL MODE</a>
 
-            <a @click='discoMode(5000)' href="#" class="btn btn-warning mainbutton">AUTOPILOT MODE</a>
-
             <a @click='discoMode(0)' href="#" class="btn btn-danger mainbutton">DEAD MODE</a>
 
 
 
             <!-- history -->
             <div class="history" v-for='h in history'>
-                <h4>{{h.color}}</h4>
-                <p>{{h.date.toString()}}</p>
-                <a @click='setColor(h.color)' href="#" class="btn btn-primary">Set Color</a>
+                <h4>{{h}}</h4>
+                <a @click='setColor(h)' href="#" class="btn btn-primary">Set Color</a>
             </div>
         </div>
 
