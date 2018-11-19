@@ -20,21 +20,25 @@
         <!-- MAIN BODY -->
         <div class="container">
 
-            <h6>{{colorscore}} / 16 81 375 Possible Colors</h6>
-            <h6>each color... is a different color...</h6>
+            <div class="header">
+                <h6>{{colorscore}} / 16 81 375 Possible Colors</h6>
+                <h6>each color... is a different color...</h6>
 
-            <!-- button to generate a random color -->
-            <a @click='setColor(getRandomColor())' href="#" class="btn btn-primary mainbutton">MANUAL MODE</a>
+                <!-- button to generate a random color -->
+                <a @click='setColor(getRandomColor())' href="#" class="btn btn-primary mainbutton">MANUAL MODE</a>
 
-            <a @click='discoMode(0)' href="#" class="btn btn-danger mainbutton">DEAD MODE</a>
+                <a @click='discoMode(0)' href="#" class="btn btn-danger mainbutton">DEAD MODE</a>
 
-
-
-            <!-- history -->
-            <div class="history" v-for='h in history'>
-                <h4>{{h}}</h4>
-                <a @click='setColor(h)' href="#" class="btn btn-primary">Set Color</a>
             </div>
+
+
+            <ul>
+                <!-- history -->
+                <li class="history col-lg-6" v-for='h in history'>{{h}}
+                    <a @click='setColor(h)' href="#">Set Color</a>
+                </li>
+            </ul>
+
         </div>
 
     </div>

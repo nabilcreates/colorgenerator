@@ -2,9 +2,18 @@ body{
     background: #1f1f1f;
     color: white !important;
     text-align: center;
+}
+
+.header{
     margin: 50px;
 }
 
 .history{
-    padding: 20px;
+    text-align: left;
+}
+
+.history a {
+    background: black;
+    color: white;
+    padding: 2px;
 }
